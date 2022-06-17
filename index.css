@@ -1,0 +1,144 @@
+* {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+}
+
+body {
+       /* font-family: ; */
+       line-height: 1.6em;
+       font-size: 16px;
+       
+}
+
+main{
+
+       background-image: url(./images/bg-intro-desktop.png);
+       background-color: hsl(0, 100%, 74%) ;
+}
+
+section {
+       /* padding: 0 50px; */
+       height: 100vh;
+       max-width: 1440px;
+       margin: 0 auto;
+       max-width: 1440px;
+}
+
+.grid {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       padding:50px 100px 50px 100px;
+       align-items: center;
+       gap: 20px;
+       
+}
+
+.right-content {
+       padding: 20px;
+       /* background: red; */
+       width: 500px;
+       /* height: 100px; */
+}
+.text-content {
+       padding:  30px;
+}
+.text-content h1 {
+       font-size: 3rem;
+       line-height: 1em !important;
+       margin-bottom: 20px;
+}
+.info {
+       background:  hsl(248, 32%, 49%);
+       color: #fff;
+       margin: 20px 0;
+       padding: 10px;
+       text-align: center;
+       border-radius: 7px;
+}
+
+.form-container {
+
+       background: #fff;
+       padding: 20px 0;
+       border-radius: 7px;
+       text-align: center;
+}
+form {
+       padding:0 20px ;
+}
+
+.form-control {
+       /* margin: 10px 0; */
+       position: relative;
+}
+
+input, button {
+       padding: 15px;
+       width: 100%;
+       outline: none;
+       border: 1px solid #ccc;
+       border-radius: 7px;
+       margin-bottom: 10px;
+       position: relative;
+}
+
+button {
+       background-color: hsl(154, 59%, 51%);
+       color: #fff;
+       cursor: pointer;
+}
+
+i {
+       position: absolute;
+       top:13px;
+       right: 20px;
+       visibility: hidden;
+}
+
+.form-control small {
+       visibility: hidden;
+       position: relative;
+       text-align: right !important;
+       right: -130px;
+       top: -10px;
+}
+
+.form-control.error small, .form-control.error i {
+       visibility: visible;
+       color: hsl(0, 100%, 74%) ;
+}
+.form-control.error input::placeholder  {
+       color: hsl(0, 100%, 74%) ;
+}
+
+.form-control.error input  {
+       border-color: hsl(0, 100%, 74%) ;
+}
+
+.form-control.success input  {
+       border-color: hsl(154, 59%, 51%);
+}
+
+
+
+@media (max-width:768px) {
+       section {
+              height: fit-content;
+              text-align: center !important;
+              padding: 0;
+       }
+       .grid {
+              grid-template-columns: 1fr;
+              padding: 40px 0;
+              gap: 0;
+              align-items: center;
+              justify-content: center;
+       }
+       .form-container {
+              /* padding: 0; */
+       }
+       .text-content {
+              padding: 10px;
+       }
+}
