@@ -37,7 +37,7 @@ section {
 .right-content {
        padding: 20px;
        /* background: red; */
-       width: 500px;
+       /* width: 500px; */
        /* height: 100px; */
 }
 .text-content {
@@ -124,14 +124,14 @@ i {
 
 @media (max-width:768px) {
        section {
-              height: fit-content;
+              height: 100vh;
               text-align: center !important;
               padding: 0;
        }
        .grid {
               grid-template-columns: 1fr;
               padding: 40px 0;
-              gap: 0;
+              gap: 0 !important;
               align-items: center;
               justify-content: center;
        }
