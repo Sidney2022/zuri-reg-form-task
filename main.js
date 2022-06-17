@@ -35,7 +35,7 @@ function checkInputs() {
    }
 
    if(emailValue === '') {
-    setError(email, 'Email Name cannot be empty');
+    setError(email, 'Email cannot be empty');
    } else {
     // Add success class
     setSuccess(email)
@@ -56,9 +56,13 @@ function setError(input, message) {
     small.innerText = message;
 
     formControl.className = 'form-control error';
+    formControl.style.marginBottom = '1rem';
+
 }
 
 function setSuccess(input, message) {
     const formControl = input.parentElement;
     formControl.className = 'form-control success';
+    formControl.style.marginBottom = '0';
+
 }

@@ -18,17 +18,17 @@ main{
 }
 
 section {
-       /* padding: 0 50px; */
        height: 100vh;
        max-width: 1440px;
        margin: 0 auto;
-       max-width: 1440px;
+       width: 90%;
+       padding: 50px;
 }
 
 .grid {
        display: grid;
        grid-template-columns: repeat(2, 1fr);
-       padding:50px 100px 50px 100px;
+       /* padding:50px 100px 50px 100px; */
        align-items: center;
        gap: 20px;
        
@@ -98,10 +98,10 @@ i {
 
 .form-control small {
        visibility: hidden;
-       position: relative;
+       position: absolute;
        text-align: right !important;
-       right: -130px;
-       top: -10px;
+       right:5px;
+       top: 43px;
 }
 
 .form-control.error small, .form-control.error i {
@@ -120,11 +120,17 @@ i {
        border-color: hsl(154, 59%, 51%);
 }
 
+.form-container p a {
+       color: hsl(0, 100%, 74%);
+}
 
+.form-container p{
+       padding: 10px;
+}
 
 @media (max-width:768px) {
        section {
-              height: 100vh;
+              height: fit-content;
               text-align: center !important;
               padding: 0;
        }
@@ -140,5 +146,8 @@ i {
        }
        .text-content {
               padding: 10px;
+       }
+       h1 {
+              font-size: 2.3rem !important;
        }
 }
