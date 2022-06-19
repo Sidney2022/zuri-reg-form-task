@@ -1,11 +1,14 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,400;1,700&display=swap');
+
+
+ * {
        padding: 0;
        margin: 0;
        box-sizing: border-box;
 }
 
 body {
-       /* font-family: ; */
+       font-family: 'poppins';
        line-height: 1.6em;
        font-size: 16px;
        
@@ -28,7 +31,7 @@ section {
 .grid {
        display: grid;
        grid-template-columns: repeat(2, 1fr);
-       /* padding:50px 100px 50px 100px; */
+       padding:50px 100px 50px 100px;
        align-items: center;
        gap: 20px;
        
@@ -36,9 +39,6 @@ section {
 
 .right-content {
        padding: 20px;
-       /* background: red; */
-       /* width: 500px; */
-       /* height: 100px; */
 }
 .text-content {
        padding:  30px;
@@ -82,11 +82,18 @@ input, button {
        margin-bottom: 10px;
        position: relative;
 }
+button:hover {
+       opacity: .8;
+}
 
+input:focus {
+       border-color: hsl(248, 32%, 49%);
+}
 button {
        background-color: hsl(154, 59%, 51%);
        color: #fff;
        cursor: pointer;
+       margin-top: 20px;
 }
 
 i {
@@ -95,13 +102,15 @@ i {
        right: 20px;
        visibility: hidden;
 }
-
+img {
+       width: 80%;
+}
 .form-control small {
        visibility: hidden;
        position: absolute;
        text-align: right !important;
        right:5px;
-       top: 43px;
+       top: 45px;
 }
 
 .form-control.error small, .form-control.error i {
@@ -122,17 +131,30 @@ i {
 
 .form-container p a {
        color: hsl(0, 100%, 74%);
+       text-decoration: none;
 }
 
 .form-container p{
-       padding: 10px;
+       padding: 10px 20px;
+       font-size: 15px;
+}
+
+@media (max-width:375px) {
+       section {
+              height: fit-content;
+
+       }
+
 }
 
 @media (max-width:768px) {
        section {
-              height: fit-content;
+              /* height: fit-content; */
               text-align: center !important;
-              padding: 0;
+              padding: 20px 0;
+       }
+       main {
+              height: fit-content;
        }
        .grid {
               grid-template-columns: 1fr;
@@ -141,13 +163,22 @@ i {
               align-items: center;
               justify-content: center;
        }
-       .form-container {
-              /* padding: 0; */
-       }
+       
        .text-content {
               padding: 10px;
        }
        h1 {
               font-size: 2.3rem !important;
        }
+       .right-content {
+              padding: 0;
+       }
+}
+
+@media (min-width:768px) and (max-width:950px) {
+       .container {
+              padding: 0;
+              height: 100vh;
+       }
+      
 }
