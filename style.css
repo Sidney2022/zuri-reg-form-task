@@ -21,7 +21,7 @@ main{
 }
 
 section {
-       height: 100vh;
+       /* height: 100vh; */
        max-width: 1440px;
        margin: 0 auto;
        width: 90%;
@@ -139,13 +139,6 @@ img {
        font-size: 15px;
 }
 
-@media (max-width:375px) {
-       section {
-              height: fit-content;
-
-       }
-
-}
 
 @media (max-width:768px) {
        section {
@@ -178,7 +171,21 @@ img {
 @media (min-width:768px) and (max-width:950px) {
        .container {
               padding: 0;
-              height: 100vh;
+              /* height: 100vh; */
        }
       
 }
+@media (max-width:375px) {
+       section {
+              /* height: fit-content; */
+
+       }
+
+}
+
+@media (orientation:landscape) {
+       section {
+              /* height:200%; */
+              padding-bottom: 50px;
+       }
+} 
